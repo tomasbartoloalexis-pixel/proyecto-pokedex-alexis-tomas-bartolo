@@ -1,5 +1,5 @@
 const contenedor = document.getElementById('pokedex-container');
-const cantidadPokemon = 150;
+const cantidadPokemon = 1028;
 
 // Práctica 8: Bucle asíncrono para traer a los 150
 const obtenerPokemons = async () => {
