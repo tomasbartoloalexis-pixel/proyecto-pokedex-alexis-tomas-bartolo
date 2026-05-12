@@ -1,0 +1,132 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: #f4f4f4;
+	text-align: center;
+}
+
+header {
+	background-color: #ef5350;
+	padding: 20px;
+	color: white;
+}
+
+#buscador {
+	padding: 10px;
+	width: 300px;
+	border-radius: 20px;
+	border: none;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/*Practica 3: CSS Grid para el contenedor */
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	padding: 40px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*Practica 2: Estilos de la tarjeta */
+.card {
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	padding: 20px;
+	transition: transform 0.2s;
+	cursor: pointer;
+}
+
+.card img{
+	transform: transLateY(-5px);
+}
+
+.card img{
+	width: 120px;
+	height: 120px;
+	background-color: rgba(255, 255, 255, 0.6 );
+	border-radius: 50%;
+	padding: 10px;
+}
+
+.number {
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+/* Práctica 10: Estilos de la Ventana Modal */
+
+/* El fondo oscuro que cubre toda la pantalla */
+.modal {
+    display: none; /* ¡Muy importante! Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con transparencia */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+/* La caja blanca con la información */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: aparecer 0.3s ease-out; /* Pequeña animación extra */
+}
+
+/* Animación para que el modal no aparezca de golpe */
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* El botón de la 'X' para cerrar */
+#cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+#cerrar-modal:hover {
+    color: black;
+}
+
+/* Caja gris claro para las estadísticas */
+.modal-stats {
+    text-align: left;
+    margin-top: 15px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
